@@ -1,27 +1,30 @@
-# NgMat
+# Accessible Angular 6 and Angular Material Example
+This example is included in an application that is deployed on GitHub. It was created using the [Angular CLI](https://cli.angular.io/) and [Angular Material](https://material.angular.io/). Accessibility test results are included in the application.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
-## Development server
+To see the working demo, go to [Angular 6 and Angular Material Example](https://snidersd2.github.io/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Select the link in the left navigation pane of the demo to view accessible Angular Material cards and form controls.
 
-## Code scaffolding
+To improve accessibility, the following have been added to the application:
+- [W3C WAI ARIA Roles](https://www.w3.org/WAI/PF/aria/roles)
+- [W3C WAI ARIA 14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html)
+- [W3C WAI ARIA 21: Using aria-invalid to indicate an error field](https://www.w3.org/TR/WCAG20-TECHS/ARIA21.html)
+- Styles to improve color contrast.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular Material automatically includes the following on the form controls in this example:
 
-## Build
+- mat-form-field uses the label tag to automatically create the aria-label for the input
+- mat-select automatically adds role="listbox" to the component and role="option"to the select options.
+- mat-radio-button automatically adds input type="radio" to the component.
+- mat-checkbox uses an internal input type="checkbox". This internal checkbox receives focus and is automatically labelled by the text content of the mat-checkbox element. In addition, aria-checked="false" is added and automatically changes to aria-checked="true" when the checkbox is checked.
+- tabindex="0"
+Note: The [Angular Material](https://material.angular.io/) web site lists the built-in accessibility for each component.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Installation Instructions
+Follow these steps to install the Accessible Angular 6 and Angular Material Example application:
+- Clone or download the accessible-material repository. 
+    - If you download the zip file extract it before proceeding. 
+- From the command-line navigate to the accessible-material (clone) or accessible-angular-master (unzip) directory.
+- Type: npm install
+- Type: ng serve --open
