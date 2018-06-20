@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+body { margin: 0; }
+mat-dialog-container {
+    position: fixed;
+    left: 20%;
+    right: 20%;
+    top: 20%;
+    bottom: 20%;
+    background-color: white;
+    z-index: 50000;
+  }
+
+  

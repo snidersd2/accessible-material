@@ -1,0 +1,76 @@
+<h2 tabindex="-1" id="errText" aria-live="assertive" class="alert"></h2>
+<h2>Contact Us</h2>
+<form class="form-container" name="signup" id="signup" method="post" action="#" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidat> 
+
+    <mat-form-field class="form-group">
+      <label for="firstName">First Name <span>*</span>
+      <input matInput type="text"  class="form-control" name="firstName" id="firstName"
+      [(ngModel)]="model.firstName" #firstName="ngModel" 
+      [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+      <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+      <div *ngIf="firstName.errors.required">First name is required</div>
+      </div>
+    </label> 
+   </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <label for="lastName">Last Name <span>*</span>
+      <input matInput type="text" class="form-control" name="lastName" id="lastName"
+      [(ngModel)]="model.lastName" #lastName="ngModel" 
+      [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+      <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+      <div *ngIf="lastName.errors.required">Last name is required</div>
+      </div>
+    </label> 
+    </mat-form-field>
+
+    <mat-form-field class="form-group">
+        <label for="email">Email <span>*</span>
+        <input matInput type="text" class="form-control" name="email" id="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+        <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+            <div *ngIf="email.errors.required">Email is required</div>
+            <div *ngIf="email.errors.email">Email must be a valid email address</div>
+        </div>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field>
+        <label for="message">Message: <span>*</span>
+        <textarea matInput class="form-control" name="message" id="message" [(ngModel)]="model.message" 
+        #message="ngModel" [ngClass]="{ 'is-invalid': f.submitted && message.invalid }" required message></textarea>
+        <div *ngIf="f.submitted && message.invalid" class="invalid-feedback">
+            <div *ngIf="message.errors.required">Your message is required</div>
+        </div>
+      </label>
+      </mat-form-field>
+
+    <mat-form-field class="form-group">
+      <label>Why are you interested in birds? 
+      <mat-select aria-label="interest" id="interest" 
+       name="interest">
+        <mat-option value="option1">Citzen Science</mat-option>
+        <mat-option value="option2">Bird Photography</mat-option>
+        <mat-option value="option3">Ornithology Research</mat-option>
+      </mat-select>
+    </label>
+  </mat-form-field>
+
+  <mat-radio-group aria-labelledby="how">
+      <label id="how">How did you hear about us?</label>
+        <mat-radio-button value="1"><label>Internet</label></mat-radio-button>
+        <mat-radio-button value="2"><label>Social Media</label></mat-radio-button>
+        <mat-radio-button value="3"><label>Email</label></mat-radio-button>
+  </mat-radio-group>
+    
+  <br>
+  
+  <mat-checkbox>
+    <label>Check here if you would like information on volunteer opportunities</label>
+  </mat-checkbox>
+ 
+  <br>
+    <div class="form-group">
+    <button mat-button class="btn btn-primary" type="submit" value="submit">Submit</button>
+    </div>
+  </form>
+ 

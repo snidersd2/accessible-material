@@ -1,0 +1,31 @@
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav 
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="isHandset ? 'directory' : 'dialog'"
+    [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+    [opened]="!(isHandset | async)!.matches">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list >
+      <a mat-list-item href="/example"><label>Angular Material</label></a>
+      <a mat-list-item href="/birds"><label>Birds of Texas</label></a>
+      <a mat-list-item href="/contact-us"><label>Contact Us</label></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content aria-label="side nav content">
+    <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="(isHandset | async)!.matches">
+        <mat-icon alt="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Accessible Angular Material Example</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

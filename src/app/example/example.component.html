@@ -1,0 +1,71 @@
+<main>
+<p aria-label="va11yS"><a href="https://ibma.github.io/Va11yS/">Back to Va11yS</a></p>
+
+  <h2>Angular Material Example</h2>
+      
+  <p>This Angular Material example is a single page Angular 6 application 
+    that is deployed on GitHub. 
+    The application was created using the <a href="https://cli.angular.io/">Angular CLI</a> and the 
+    <a href="https://github.com/seeschweiler/angular6-material">Angular 6 Material</a> code. Accessibility test 
+    results are included at the bottom of the page.
+ </p>
+ <p>To improve accessibility, the following have been added to the application:</p>
+ <ul>
+   <li><a href="https://www.w3.org/WAI/PF/aria/roles">W3C WAI ARIA Roles</a></li>
+   <li><a href="https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html">W3C WAI ARIA 14: Using aria-label to provide an invisible label where a visible label cannot be used</a></li>
+   <li><a href="https://www.w3.org/TR/WCAG20-TECHS/ARIA21.html">W3C WAI ARIA 21: Using aria-invalid to indicate an error field</a></li>
+   <li>Styles to improve color contrast.</li>
+ </ul>
+
+ <p>Angular Material automatically includes the following on the form controls in this example:</p>
+ <ul>
+   <li><code>mat-form-field</code> uses the <code>label</code> tag to automatically create the <code>aria-label</code> for the <code>input</code></li>
+   <li><code>mat-select</code> automatically adds <code>role="listbox"</code> to the component and <code>role="option"</code>to the select options.</li>
+   <li><code>mat-radio-button</code> automatically adds <code>input type="radio"</code> to the component.</li>
+   <li><code>mat-checkbox</code> uses an internal <code>input type="checkbox"</code>. This internal checkbox receives focus and 
+    is automatically labelled by the text content of the <code>mat-checkbox</code> element. In addition, <code>aria-checked="false"</code>
+    is added and automatically changes to <code>aria-checked="true"</code> when the checkbox is checked.</li>
+   <li><code>tabindex="0"</code></li>
+ </ul>
+ <p>Note: The <a href="https://material.angular.io/components/categories">Angular Material</a> web site
+  lists the built-in accessibility for each component.</p>
+</main>
+<footer>
+  <hr>
+  <h2>Tested on:</h2>
+    <div>
+     <ul>
+       <li>Mac OS Sierra 10.13.4, VoiceOver, and the Chrome 66.0.3359.181 browser.</li>
+        <ul>
+          <li>Results - VoiceOver announces:</li>
+            <ul>
+              <li>titles, links, headings, aria-labels, and landmarks</li>
+              <li>lists and number of list items</li>
+              <li>dialog modal content and buttons</li>
+              <li>form controls, states (i.e. selected, checked, etc.) and required fields</li>
+              <li>form validation message on submit</li>
+            </ul>
+        </ul>
+     </ul>
+    </div>
+    <div>
+      <ul>
+        <li>Windows 7, JAWS 2018.1805.33 ILM, and the Chrome 67.0.3396.79 browser.</li>
+         <ul>
+           <li>Results - JAWS announces:</li>
+             <ul>
+               <li>titles, links, headings, aria-labels, and landmarks</li>
+               <li>lists and number of list items</li>
+               <li>dialog modal content and buttons</li>
+               <li>form controls, states (i.e. selected, checked, etc.) and required fields</li>
+               <li>form validation message on submit</li>
+               <li>Note: If a text input field has been visited and left empty, then revisted,
+                Jaws announces:  Last name, star edit required, invalid entry, 
+                type in text, and a red underline displays underneath the text input field.</li>
+             </ul>
+         </ul>
+      </ul>
+     </div>
+</footer>
+
+

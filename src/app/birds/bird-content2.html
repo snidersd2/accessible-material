@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Are you sure you want to Share this bird?</h2>
+<mat-dialog-content>
+  <p>Click the "OK" button to continue or the "Cancel" button to exit without saving any changes.</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close aria-label="cancel">Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial aria-label="OK">OK</button>
+</mat-dialog-actions>
